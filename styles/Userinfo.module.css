@@ -1,0 +1,79 @@
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.514);
+    z-index: 999;
+}
+
+.wrapper {
+    width: 30%;
+    background-color: white;
+    border-radius:20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input {
+    height: 30px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+
+}
+
+.button {
+    width: 100px;
+    padding:10px 5px;
+    margin-bottom:5px;
+    cursor:pointer;
+    background-color:#d1411e;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius:6px;
+    margin-top: 10px;
+    align-self: center;
+    border: none;
+}
+
+.crossButton {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius:50%;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width:480px) {
+    .wrapper {
+        width: 95%;
+    }
+}

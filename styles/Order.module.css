@@ -1,0 +1,122 @@
+.container {
+    padding: 50px;
+    display: flex;
+}
+
+.left {
+    flex: 2;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.row:last-child {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inProgress {
+    animation: inProgress 1s ease infinite alternate;
+}
+
+@keyframes inProgress {
+    from { 
+        opacity: 0
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+.undone {
+    opacity: 0.3;
+}
+
+.undone .checkedIcon , .inProgress .checkedIcon {
+    display: none;
+}
+
+.right {
+    flex: 1;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 300px;
+    background-color: #333;
+    padding: 50px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.totalTextTitle {
+    margin-right: 10px;
+}
+
+.button {
+    height: 30px;
+    color: teal;
+    font-weight: bold;
+    cursor: not-allowed;
+    margin-top: 20px;
+    background-color: white;
+}
+
+@media screen and (max-width:480px){
+    .container {
+        flex-direction: column;
+    }
+
+    .trTitles {
+        display: none;
+    }
+
+    .tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .id::before {
+        content: 'Order ID: ';
+        font-weight: 500;
+    }
+
+    .name::before {
+        content: 'Customer: ';
+        font-weight: 500;
+    }
+
+    .address::before {
+        content: 'Address: ';
+        font-weight: 500;
+    }
+
+    .total::before {
+        content: 'Total: ';
+        font-weight: 500;
+    }
+
+    .row:last-child {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .done , .undone, .inProgress {
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
