@@ -27,8 +27,8 @@ const Footer = () => {
                 </p>
             </div>
             <Link href='/admin' passHref>
-            <span className={styles.admin}>Admin</span>
-        </Link>
+                <span className={styles.admin}>Admin</span>
+            </Link>
         </div>
     </div>
 };

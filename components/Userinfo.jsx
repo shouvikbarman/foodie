@@ -14,7 +14,7 @@ const Userinfo = ({cross,handleContinue,setUserData}) => {
             if(phone.length<10){
                 alert('Please enter correct phone number');
             }else{
-                const res = await axios.get('http://localhost:3000/api/user',{params:{phone:phone}})
+                const res = await axios.get(process.env.BASE_URL+'api/user',{params:{phone:phone}})
                 if (!res.data) {
                     setUser(true);
                 }else {
@@ -30,7 +30,7 @@ const Userinfo = ({cross,handleContinue,setUserData}) => {
     const CreateUser = async () => {
         try {
             const data = {name,phone,address};
-            const res = await axios.post('http://localhost:3000/api/user',data);
+            const res = await axios.post(process.env.BASE_URL+'api/user',data);
             setUserData(res.data);
             handleContinue()
         } catch (error) {

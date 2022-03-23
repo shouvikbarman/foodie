@@ -48,7 +48,7 @@ const Edit = ({setClose,modalOpt,products,setProductList}) => {
             }else{
                 newProduct = {title,desc,prices,img,extraOptions};
             }
-            const editRes = await axios.put('http://localhost:3000/api/products/'+modalOpt._id,newProduct);
+            const editRes = await axios.put(process.env.BASE_URL+'api/products/'+modalOpt._id,newProduct);
             const newProductList = products.filter(product => product._id !== modalOpt._id);
             setProductList([...newProductList,editRes.data]);
             setClose(true);

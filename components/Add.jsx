@@ -40,7 +40,7 @@ const Add = ({setClose}) => {
             const uploadRes = await axios.post('https://api.cloudinary.com/v1_1/dpqtwugk5/image/upload',data);
             const {url} = uploadRes.data;
             const newProduct = {title,desc,prices,img:url,extraOptions};
-            await axios.post('http://localhost:3000/api/products',newProduct);
+            await axios.post(process.env.BASE_URL+'api/products',newProduct);
             setClose(true);
          } catch (error) {
              console.log(error);

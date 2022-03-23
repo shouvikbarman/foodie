@@ -38,7 +38,7 @@ const Cart = () => {
             total:cart.total,
             method:0
         } 
-      const res = await axios.post('http://localhost:3000/api/orders',data);
+      const res = await axios.post(process.env.BASE_URL +'api/orders',data);
       res.status === 201 && router.push('/orders/'+ res.data._id);
       dispatch(reset());
     } catch (err) {

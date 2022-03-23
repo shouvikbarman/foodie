@@ -4,7 +4,8 @@ module.exports = {
     domains: ['c.tenor.com','res.cloudinary.com'],
   },
   env: {
-    mid: 'pkOjSQ63348810371031',
-    mkey: 'fD%uHmIbDShtLAQ6'
+    BASE_URL:process.env.BASE_URL,
+    mid:process.env.mid,
+    mkey:process.env.mkey
   }
 }

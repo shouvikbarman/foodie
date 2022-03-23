@@ -11,7 +11,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            await axios.post('http://localhost:3000/api/login', {username,password});
+            await axios.post(process.env.BASE_URL+'api/login', {username,password});
             router.push('/admin');
         } catch (error) {
             setError(true);
